@@ -97,6 +97,14 @@ https://www.digitalocean.com/community/tutorials/comment-installer-nginx-sur-ubu
 
 
 
+### JavaScript HTML DOM
+
+Le DOM est une arborescence d'objets javascript correpondant à la page affichée dans le navigateur.
+
+Coder coté Navigateur web en Javascript se résume en général à manipuler les objets du dom, et à réagir à leur évènements.
+
+https://www.w3schools.com/js/js_htmldom.asp
+
 
 ### Bottle
 http://bottlepy.org/docs/dev/
@@ -116,6 +124,10 @@ https://flaviocopes.com/express/
 
 
 ### REACT
+
+https://dev.to/aspittel/a-complete-beginners-guide-to-react-2cl6
+
+https://morioh.com/p/b856ead14ab7
 
 https://fr.reactjs.org/tutorial/tutorial.html
 
