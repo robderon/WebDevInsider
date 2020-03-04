@@ -15,9 +15,9 @@ Quelques exemples d'utilisation de NETCAT, pour mieux comprendre tcp/ip, les dif
 https://www.thegeekstuff.com/2012/04/nc-command-examples/
 https://doc.fedora-fr.org/wiki/Netcat,_connexion_client/serveur_en_bash
 
-
 Pour ceux qui veulent aller encore plus loin en compréhension du réseau avec NMAP :
 https://www.varonis.com/blog/nmap-commands/
+
 
 ### Linux Terminal Basics
 
@@ -49,12 +49,63 @@ Crééer un script python, bash, php, perl
 
 ### Un mini serveur web avec python3
 
-Ce serveur vous permet d'accéder à vos fichiers. 
-A lancer depuis le répértoire que vous vous voulez mettre à disposition.
-
 python3 -m http.server 8000
 
+Le document root du serveur sera le dossier dans lequel vous avec lancé la commande.
+Si vous lancez la comande dans /home/martin/www/ , votre document root sera /home/martin/www/
+Si le dossier demandé contient un fichier index.htm ou index.html, son contenu sera envoyé au client.
+ATTENTION : Si il n'y a pas d'index.htm ou index.html dans le dossierce serveur a la particularité d'afficher la liste des fichiers du répértoire
+
+Attention, vous ne pouvez plus utiliser la fenêtre dans laquelle vous avez lancé le serveur, car celle ci reste monopolisée par le serveur pour l'affichage des logs de connexion. pour lancer des commandes une fois le serveur lancé, ouvrez un nouveau terminal.
+
+
 https://docs.python.org/3/library/http.server.html
+
+
+### Un mini serveur web dynamique avec python3
+
+python3 -m http.server --cgi 8000
+
+En plus de servir vos fichiers statiques, ce serveur web exectuera les scripts situés dans le dossier cgi-bin/ et enverra leur sortie au navigateur.
+
+
+
+### Comprendre le Document Root de votre Serveur web
+
+Quand un serveur web reçoit une requête, il etrait le chemin du fichier de la requête (la partie de l'URL qui suit le nom d'hôte et le port), puis il l'ajoute à la fin de la valeur de la directive Document Root (appelée seulement Root sur nginx) définie dans vos fichiers de configuration. Ainsi, les fichiers et répertoires situés en dessous de Document Root constituent l'arborescence de base des documents qui seront visibles depuis le web.
+
+Par exemple, si la directive Document Root contient /var/www/html, une requête pour http://www.example.com/fish/guppies.html retournera le fichier /var/www/html/fish/guppies.html au client.
+
+### Un serveur web haute performance : NGINX
+
+Trouver le fichier de conf : nginx -t
+
+Linux:
+lancer nginx
+`service nginx status`
+
+Arreter nginx
+`service nginx status`
+
+Mac (brew):
+lancer nginx
+`brew services start nginx`
+ou
+`sudo nginx`
+
+Arreter nginx
+`brew services stop nginx`
+ou
+`sudo nginx -s stop`
+
+
+
+nginx sur mac :
+https://medium.com/@ThomasTan/installing-nginx-in-mac-os-x-maverick-with-homebrew-d8867b7e8a5a
+
+nginx linux tres complet (= windows WSL):
+https://www.digitalocean.com/community/tutorials/comment-installer-nginx-sur-ubuntu-18-04-fr
+
 
 ### TUTO HTML & CSS
 https://www.w3schools.com/html/html_intro.asp
@@ -92,35 +143,6 @@ https://www.w3schools.com/html/html_responsive.asp
 Pour aller plus loin:
 https://www.w3schools.com/css/css_rwd_intro.asp
 
-### NGINX
-
-Trouver le fichier de conf : nginx -t
-
-Linux:
-lancer nginx
-`service nginx status`
-
-Arreter nginx
-`service nginx status`
-
-Mac (brew):
-lancer nginx
-`brew services start nginx`
-ou
-`sudo nginx`
-
-Arreter nginx
-`brew services stop nginx`
-ou
-`sudo nginx -s stop`
-
-
-
-nginx sur mac :
-https://medium.com/@ThomasTan/installing-nginx-in-mac-os-x-maverick-with-homebrew-d8867b7e8a5a
-
-nginx linux tres complet (= windows WSL):
-https://www.digitalocean.com/community/tutorials/comment-installer-nginx-sur-ubuntu-18-04-fr
 
 
 
