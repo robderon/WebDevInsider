@@ -1,7 +1,9 @@
 
 ### WSL
-pour accéder à vos fichiers WSL depuis windows ( Si votre windows est à jour)
-https://www.omgubuntu.co.uk/2019/02/access-linux-files-from-windows-explorer-wsl
+pour accéder à vos fichiers WSL depuis windows ( Si votre windows est à jour) :
+depuis votre terminal linux tapez `explorer.exe .`  ( ne pas oublier le point)
+
+https://www.howtogeek.com/426749/how-to-access-your-linux-wsl-files-in-windows-10/
 
 ### Comment le web fonctionne :
 https://www.freecodecamp.org/news/how-the-web-works-a-primer-for-newcomers-to-web-development-or-anyone-really-b4584e63585c/
