@@ -46,17 +46,24 @@ Si mon invite de commande finit par un # , je suis root.
 Crééer un script python, bash, php, perl
 
 
+### Comprendre le Document Root de votre Serveur web
+
+Quand un serveur web reçoit une requête, il etrait le chemin du fichier de la requête (la partie de l'URL qui suit le nom d'hôte et le port), puis il l'ajoute à la fin du dossier Document Root (appelée seulement Root sur nginx) défini dans vos fichiers de configuration. Ainsi, les fichiers et répertoires situés en dessous de Document Root constituent l'arborescence de base des documents qui seront visibles depuis le web. Les fichiers et dossiers situés au dessus de Document Root dans votre arborescence ne sont pas visibles sur le web.
+
+Par exemple, si la directive Document Root contient /var/www/html, une requête pour http://www.example.com/fish/guppies.html retournera le fichier /var/www/html/fish/guppies.html au client.
+
+
 
 ### Un mini serveur web avec python3
 
 python3 -m http.server 8000
 
-Le document root du serveur sera le dossier dans lequel vous avec lancé la commande.
-Si vous lancez la comande dans /home/martin/www/ , votre document root sera /home/martin/www/
+Le document root du serveur sera le dossier dans lequel vous avec lancé la commande : 
+Si vous lancez la comande dans /home/martin/www/ , votre document root sera /home/martin/www/ .
 Si le dossier demandé contient un fichier index.htm ou index.html, son contenu sera envoyé au client.
 ATTENTION : Si il n'y a pas d'index.htm ou index.html dans le dossierce serveur a la particularité d'afficher la liste des fichiers du répértoire
 
-Attention, vous ne pouvez plus utiliser la fenêtre dans laquelle vous avez lancé le serveur, car celle ci reste monopolisée par le serveur pour l'affichage des logs de connexion. pour lancer des commandes une fois le serveur lancé, ouvrez un nouveau terminal.
+ATTENTION, vous ne pouvez plus utiliser la fenêtre dans laquelle vous avez lancé le serveur, car celle ci reste monopolisée par le serveur pour l'affichage des logs de connexion. pour lancer des commandes une fois le serveur lancé, ouvrez un nouveau terminal.
 
 
 https://docs.python.org/3/library/http.server.html
@@ -69,12 +76,6 @@ python3 -m http.server --cgi 8000
 En plus de servir vos fichiers statiques, ce serveur web exectuera les scripts situés dans le dossier cgi-bin/ et enverra leur sortie au navigateur.
 
 
-
-### Comprendre le Document Root de votre Serveur web
-
-Quand un serveur web reçoit une requête, il etrait le chemin du fichier de la requête (la partie de l'URL qui suit le nom d'hôte et le port), puis il l'ajoute à la fin de la valeur de la directive Document Root (appelée seulement Root sur nginx) définie dans vos fichiers de configuration. Ainsi, les fichiers et répertoires situés en dessous de Document Root constituent l'arborescence de base des documents qui seront visibles depuis le web.
-
-Par exemple, si la directive Document Root contient /var/www/html, une requête pour http://www.example.com/fish/guppies.html retournera le fichier /var/www/html/fish/guppies.html au client.
 
 ### Un serveur web haute performance : NGINX
 
@@ -107,12 +108,12 @@ nginx linux tres complet (= windows WSL):
 https://www.digitalocean.com/community/tutorials/comment-installer-nginx-sur-ubuntu-18-04-fr
 
 
+
+
 ### TUTO HTML & CSS
 https://www.w3schools.com/html/html_intro.asp
 
 https://internetingishard.com/html-and-css/
-
-
 
 https://www.w3schools.com/css/css_intro.asp
 
@@ -122,19 +123,21 @@ https://www.w3schools.com/css/css_selectors.asp
 Pour debugger CSS quand vous ne comprenez pas pourquoi votre style n'est pas pris en compte:
 https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance
 
-
 Comprendre Block, Inline, Float:
 https://openweb.eu.org/articles/initiation_flux/
-
-https://openweb.eu.org/articles/initiation_float
 
 Unites css, taille de police, em:
 https://www.w3.org/Style/Examples/007/units.fr.html
 
 Bien utiliser les outils developpeurs chrome:
 https://developers.google.com/web/tools/chrome-devtools
-
 https://developers.google.com/web/tools/chrome-devtools/css
+
+
+### HTML: URL ABSOLUES ET RELATIVES
+
+pour comprendre comme rédiger la valeur HREF de vos liens, et la valeur SRC de vos images :
+https://www.lumni.fr/article/apprendre-le-html-url-absolue-et-url-relative
 
 
 ### Responsive web design
