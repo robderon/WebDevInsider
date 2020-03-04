@@ -19,6 +19,33 @@ https://doc.fedora-fr.org/wiki/Netcat,_connexion_client/serveur_en_bash
 Pour ceux qui veulent aller encore plus loin en compréhension du réseau avec NMAP :
 https://www.varonis.com/blog/nmap-commands/
 
+### Linux Terminal Basics
+
+Afficher le dossier courant:
+`pwd`
+= Print Working Directory
+
+Aller dans un dossier "enfant" du répértoire courant :
+`cd NomDuDossier`
+
+Aller dans n'importe quel dossier du système de fichiers (en commençant par /)  :
+`cd /CheminCompletVersLeDossier`
+
+Aller dans le dossier parent:
+`cd ..`
+
+Lancer une commande en root (adminsitrateur):
+`sudo commande`
+
+Devenir root :
+`su`
+
+Si mon invite de commande finit par un $ , je ne suis pas root.
+Si mon invite de commande finit par un # , je suis root.
+
+Crééer un script python, bash, php, perl
+
+
 
 ### Un mini serveur web avec python3
 
