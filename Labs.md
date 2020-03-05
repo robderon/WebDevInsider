@@ -6,7 +6,7 @@ When you type a URL in the adress bar and press enter, the browser (the client) 
 If I type http://www.example.com/ and press enter :
 
 1.  The browser sends a request line and request headers ( key:value pairs) : 
-```
+```HTTP
 GET / HTTP/1.1
 Host: www.example.com
 Connection: keep-alive
@@ -16,7 +16,7 @@ Connection: keep-alive
 
 2. The server answers with status line and response headers, then two line breaks, and the content, usually html
 
-```
+```HTTP
 HTTP/1.1 200 OK
 Content-Type: text/html;
 ...
@@ -59,7 +59,7 @@ This is HTTP request, with request lines and request headers.
 
 > run netcat in server mode again, connect with your browser using the same url, and this time, once the browser made his request, cut paste this text into the terminal window. See what happens.
 
-````
+````HTTP
 HTTP/1.1 200 OK
 Content-Type: text/html;
 
@@ -154,7 +154,7 @@ https://www.w3schools.com/js/js_htmldom_events.asp
 
 1. Créez un dossier `cgi-bin/` dans votre document root , et placez y un script appelé hello.py contenant le code suivant :
 
-```
+```PYTHON
 #!/usr/bin/env python3
 
 print("Content-type: text/html")
