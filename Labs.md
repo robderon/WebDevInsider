@@ -176,3 +176,7 @@ print("""
 
 4. Saisissez l'adresse suivante dans votre navigateur:
 http://localhost:8503/cgi-bin/hello.py
+
+Remarquez bien que nginx est peut être encore en train de servir le même site sur un autre port. Ca n'est pas du tout un problème pour l'OS. Vous pouvez accéder au reste du site statique avec le serveur python : 
+
+http://localhost:8503/
