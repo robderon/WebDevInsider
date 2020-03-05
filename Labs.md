@@ -89,7 +89,7 @@ Directory structure should look like :
 /FAQ/faq.html
 /IMAGES/
 /IMAGES/xxxxxxxx.jpg
-````
+```
 
 5. Request the website from your browser.
 
@@ -146,3 +146,33 @@ Help : https://www.w3schools.com/html/html_responsive.asp
 6. Le contour des champs change de couleur quand le champ est actif
 
 Help: https://www.w3schools.com/html/html_forms.asp
+
+pour associer du code JS aux évènements de la page :
+https://www.w3schools.com/js/js_htmldom_events.asp
+
+# LAB 4 LET’S GET DYNAMIC
+
+1. Créez un dossier `cgi-bin/` dans votre document root , et placez y un script appelé hello.py contenant le code suivant :
+
+```
+#!/usr/bin/env python3
+
+print("Content-type: text/html")
+print("")
+print("""
+<html><body>
+<p>Hello World! </p>
+</body></html>
+""")
+
+```
+
+( La première ligne est importante, c'est grace à elle que Linux va savoir comment éxecuter ce script. en l'occurence, lancer python3. Contrairement à windows, l'extension ne signifie rien sur Linux, elle n'est la que pour vous donner une indication)
+
+2. toujours dans le dossier cgi-bin, tapez `chmod +x ./hello.py` pour rendre le script executable
+
+3. Retournez dans le Document root directory avec `cd ..`, et lancer un serveur web python3 avec execution cgi : 
+`python3 -m http.server --cgi 8503``
+
+4. Saisissez l'adresse suivante dans votre navigateur:
+http://localhost:8503/cgi-bin/hello.py
