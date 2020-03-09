@@ -150,7 +150,7 @@ Help: https://www.w3schools.com/html/html_forms.asp
 pour associer du code JS aux évènements de la page :
 https://www.w3schools.com/js/js_htmldom_events.asp
 
-# LAB 4 LET’S GET DYNAMIC
+# LAB 5 LET’S GET DYNAMIC
 
 1. Créez un dossier `cgi-bin/` dans votre document root , et placez y un script appelé hello.py contenant le code suivant :
 
