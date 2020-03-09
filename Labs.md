@@ -172,7 +172,7 @@ print("""
 2. toujours dans le dossier cgi-bin, tapez `chmod +x ./hello.py` pour rendre le script executable
 
 3. Retournez dans le Document root directory avec `cd ..`, et lancer un serveur web python3 avec execution cgi : 
-`python3 -m http.server --cgi 8503``
+`python3 -m http.server --cgi 8503`
 
 4. Saisissez l'adresse suivante dans votre navigateur:
 http://localhost:8503/cgi-bin/hello.py
