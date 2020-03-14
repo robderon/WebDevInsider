@@ -180,3 +180,113 @@ http://localhost:8503/cgi-bin/hello.py
 Remarquez bien que nginx est peut être encore en train de servir le même site sur un autre port. Ca n'est pas du tout un problème pour l'OS. Vous pouvez accéder au reste du site statique avec le serveur python : 
 
 http://localhost:8503/
+
+----
+### PART 2
+
+Now we will see how to handle user input in our python script. Point your html form to a new script called helloVariables.py
+
+```python
+#!/usr/bin/env python3
+import cgi
+formData = cgi.FieldStorage()
+
+print("Content-type: text/html")
+print("")
+print("""
+<html><body>
+<p>Hello World! </p>
+""")
+
+print("<h1>",formData['question'].value,"</h1>")
+print("<h1>",formData['reponse'].value,"</h1>")
+
+print("""
+</body></html>
+""")
+```
+
+----
+### PART 3
+This script will automatically show all form’s content. Name it userinput.py, update your form to point toward it and try it.
+
+```python
+#!/usr/bin/env python3
+import cgi
+myForm = cgi.FieldStorage()
+
+print("Content-type: text/html")
+print("")
+print("""
+<html><body>
+<p>Hello World! </p>
+""")
+
+print("<p> Here are the form’s content  : </p>")
+print("<ul>")
+for key in myForm:
+    print("<li>")
+    print(key," : ", myForm[key].value )
+    print("</li>")
+print("</ul>")
+
+print("""
+</body></html>
+""")
+```
+
+---
+### Scored Assignment 1 : Field verification on server side 
+
+- Modify userinput.py : The script should check the existence of the variables question and reponse before trying to display them. 
+
+- If one or both variables are not present, you should display the exact following error message
+  - >Please fill in all required fields
+- If both variables are present, you should display the exact following error message :
+  - >The form is valid
+
+- we will do field verification on browser side later with javascript.
+
+---
+### Scored Assignment 2 : Various operations on server side
+
+-  In a new directory, launch a python cgi-bin server on port 23500
+
+-  Create an index.html page with a form containing 3 text input and one submit button. The user must input two numbers and one text string, then click submit. Let’s call the 3 text inputs A , B and C.
+
+-  in a cgi-bin/ directory, create a python script named operations.py to receive form’s data. the script will display a html page containing 3 `<p></p>` blocks. The first p block will display the result of A+B, the second will display the result of A x B, the third will display the input string C , repeated A+B times :
+
+- if A=1 , B=2 , C=Hello, the script must display   
+  - 3
+  - 2
+  - HelloHelloHello
+
+
+---
+### Assignment 3 : inserting data in sqlite3 database
+
+
+- Copy userinput.py to userinputdb.py
+import sqlite3 module, connect to faq.db , and  execute : 
+
+```SQL
+CREATE TABLE IF NOT EXISTS Faq (
+  faqId INTEGER PRIMARY KEY AUTOINCREMENT,
+  question TEXT NOT NULL,
+  reponse TEXT NOT NULL
+)
+```
+
+The script sould create a new row in the Faq table on every valid form submission.
+don’t forget to commit the changes in the database.
+
+---
+### Assignment 4 : Regroup all operations in one script : faq.py
+
+-  Create a script called faq.py.
+
+- faq.py should display the content of the faq.html page : menu, list of questions and answers, and the form in the bottom.
+
+-  If form's variables are present, it should handle row creation. 
+
+-  The display of the faq should be dynamic : questions and answers will come from a SQL select.

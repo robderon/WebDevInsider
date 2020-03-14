@@ -1,7 +1,11 @@
 
 ### WSL
 pour accéder à vos fichiers WSL depuis windows ( Si votre windows est à jour) :
-depuis votre terminal linux tapez `explorer.exe .`  ( ne pas oublier le point)
+depuis votre terminal linux tapez 
+
+`explorer.exe .`  
+
+( ne pas oublier le point)
 
 https://www.howtogeek.com/426749/how-to-access-your-linux-wsl-files-in-windows-10/
 
