@@ -285,7 +285,7 @@ don’t forget to commit the changes in the database.
 
 -  Create a script called faq.py.
 
-- faq.py should display the content of the faq.html page : menu, list of questions and answers, and the form in the bottom.
+- faq.py should display the content of the faq.html page : menu, list of questions and answers, and the form in the bottom. Your app should become accessible through http://localhost:8505/cgi-bin/faq.py
 
 -  If form's variables are present, it should handle row creation. 
 
