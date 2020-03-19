@@ -290,3 +290,27 @@ don’t forget to commit the changes in the database.
 -  If form's variables are present, it should handle row creation. 
 
 -  The display of the faq should be dynamic : questions and answers will come from a SQL select.
+
+
+# LAB 6 NODE + EXPRESS
+
+### Assignment 5 : PORT FAQ APP FROM PYTHON CGI TO NODE + EXPRESS
+
+- Follow the node + express CRUD tutorial to understand how Node.js work and the differences with the classic cgi way.
+https://blog.pagesd.info/2019/10/08/crud-with-express-sqlite-10-steps/
+
+- then port the python faq.py app to node.
+
+- Then read this complementary tutorial to strenghten Node functions comprehension : 
+
+https://flaviocopes.com/express/
+
+---
+### Assignement 6 : Domain filter & search box
+
+- Ajoutez un champ TEXT nommé « domaine » a votre table.  ( http, javascript, python, nginx, linux, node …)
+- Ajoutez un input de type select nommé « domaine » a votre formulaire. La liste des éléments de la liste est définie dans le script par une liste « en dur ».
+- Faites le nécéssaire pour que l’information saisie dans le formulaire soit enregistrée dans la base.
+- Modifiez la faq pour afficher le domaine pour chaque question
+- Modifiez la faq pour afficher sous le menu principal une sous navigation horizontale avec un lien par domaine.  Le domaine du filtre sera donc transmis dans l’url (et donc en GET ,  pas en POST)
+- Ajoutez un champ de recherche en haut de la page contenu dans un nouveau formulaire. il permet d’envoyer en POST un mot clé de recherche permettant de n’afficher que les question-reponses contenant le mot clé demandé, dans tous les domaines. 
