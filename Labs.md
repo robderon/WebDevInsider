@@ -322,7 +322,7 @@ https://flaviocopes.com/express/
 ( never store unencrypted password in your database)
 - Create a Sign up page and a Sign in page (like on Github)
 - The Sign-up page should appear automatically when i'm not logged in
-- A session cookie should be set in the user's browser, so that if I was logged in and I close my browser and open it again, i'll be logged in again automatically.
+- A session cookie should be set in the user's browser, so that I don't need to login on every page.
 - When i'm logged in, my nickname should appear on the upper right corner
 - I can't see content or add content while i'm not logged in. So all pages redirect to sign up page if not logged in.
 
