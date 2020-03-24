@@ -314,3 +314,63 @@ https://flaviocopes.com/express/
 - Modifiez la faq pour afficher le domaine pour chaque question
 - Modifiez la faq pour afficher sous le menu principal une sous navigation horizontale avec un lien par domaine.  Le domaine du filtre sera donc transmis dans l’url (et donc en GET ,  pas en POST)
 - Ajoutez un champ de recherche en haut de la page contenu dans un nouveau formulaire. il permet d’envoyer en POST un mot clé de recherche permettant de n’afficher que les question-reponses contenant le mot clé demandé, dans tous les domaines. 
+
+---
+### Assignement 6 : I'm not alone
+
+- Create a user table in your database, with email, nickname, encrypted password
+( never store unencrypted password in your database)
+- Create a login page in your app.
+- The login page should appear automatically when i'm not logged in
+- When i'm logged in, my nickname should appear on the upper right corner
+- A session cookie should be set in the user's browser.
+
+- Modify app to memorize every question/answer's author (user_id)
+- Display question / answer author on every question/answer.
+
+- When you're done, you can upgrade so that another user can propose a better answer, and allow voting ( one vote /user/ reponse)
+- Show best voted answers on front page.
+
+https://www.codementor.io/@mayowa.a/how-to-build-a-simple-session-based-authentication-system-with-nodejs-from-scratch-6vn67mcy3
+
+DON'T USE SEQUELIZE
+USE ONLY SQLITE
+
+When you're done :
+
+Understand Javascript Asynchronous Principles:
+https://www.youtube.com/watch?v=8aGhZQkoFbQ&feature=youtu.be
+
+https://nodejs.org/en/docs/guides/dont-block-the-event-loop/
+
+Use it in node :
+https://codeburst.io/node-js-mysql-and-async-await-6fb25b01b628
+
+
+---
+### Assignement 7 : Live Update with REACT
+
+Make the question / answer list auto updating without reloading the page.
+ie. if another user add a question / anwser while i'm on the page, the page will show it immediately.
+
+To test it, open two different browsers logged in with two different users, one window on the left, one on the right.
+
+Use socket.io on server side.
+
+Socket.io :
+https://www.valentinog.com/blog/socket-react/
+
+React :
+
+Lorsque vous démarrez un projet React, une simple page HTML avec des balises de script reste peut-être la meilleure option. Ça ne prend qu’une minute à mettre en place !
+https://fr.reactjs.org/docs/add-react-to-a-website.html
+
+ou https://fr.reactjs.org/docs/add-react-to-a-website.html
+
+puis
+https://fr.reactjs.org/docs/hello-world.html
+
+
+Pas utile pour ce Lab, mais bon a savoir, les Hooks ont simplifié la syntaxe React.
+Les Hooks sont arrivés avec React 16.8. Ils vous permettent de bénéficier d’un état local et d’autres fonctionnalités de React sans avoir à écrire une classe : 
+https://fr.reactjs.org/docs/hooks-intro.html
