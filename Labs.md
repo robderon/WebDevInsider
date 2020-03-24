@@ -320,10 +320,11 @@ https://flaviocopes.com/express/
 
 - Create a user table in your database, with email, nickname, encrypted password
 ( never store unencrypted password in your database)
-- Create a login page in your app.
-- The login page should appear automatically when i'm not logged in
+- Create a Sign up page and a Sign in page (like on Github)
+- The Sign-up page should appear automatically when i'm not logged in
+- A session cookie should be set in the user's browser, so that if I was logged in and I close my browser and open it again, i'll be logged in again automatically.
 - When i'm logged in, my nickname should appear on the upper right corner
-- A session cookie should be set in the user's browser.
+- I can't see content or add content while i'm not logged in. So all pages redirect to sign up page if not logged in.
 
 - Modify app to memorize every question/answer's author (user_id)
 - Display question / answer author on every question/answer.
@@ -331,12 +332,21 @@ https://flaviocopes.com/express/
 - When you're done, you can upgrade so that another user can propose a better answer, and allow voting ( one vote /user/ reponse)
 - Show best voted answers on front page.
 
+
+You can use this tutorial, but don't do everything as it does.
+We don't need Models ( but use it if you want to)
+We don't need SEQUELIZE ( but use it if you want to)
+USE ONLY SQLITE 
+
 https://www.codementor.io/@mayowa.a/how-to-build-a-simple-session-based-authentication-system-with-nodejs-from-scratch-6vn67mcy3
 
-DON'T USE SEQUELIZE
-USE ONLY SQLITE
+
 
 When you're done :
+
+- Open a free account on Sendgrid, and use it to send a confirmation email from your app
+- Users can add questions / answers only when email is confirmed.
+
 
 Understand Javascript Asynchronous Principles:
 https://www.youtube.com/watch?v=8aGhZQkoFbQ&feature=youtu.be
