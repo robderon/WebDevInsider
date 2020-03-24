@@ -316,7 +316,7 @@ https://flaviocopes.com/express/
 - Ajoutez un champ de recherche en haut de la page contenu dans un nouveau formulaire. il permet d’envoyer en POST un mot clé de recherche permettant de n’afficher que les question-reponses contenant le mot clé demandé, dans tous les domaines. 
 
 ---
-### Assignement 6 : I'm not alone
+### Assignement 7 : I'm not alone
 
 - Create a user table in your database, with email, nickname, encrypted password
 ( never store unencrypted password in your database)
@@ -348,7 +348,7 @@ https://codeburst.io/node-js-mysql-and-async-await-6fb25b01b628
 
 
 ---
-### Assignement 7 : Live Update with REACT
+### Assignement 8 : Live Update with REACT
 
 Make the question / answer list auto updating without reloading the page.
 ie. if another user add a question / anwser while i'm on the page, the page will show it immediately.
