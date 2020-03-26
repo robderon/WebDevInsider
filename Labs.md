@@ -73,7 +73,8 @@ Hello World !
 
 # LAB 2 Static Web
 
-1. Setup and run a static web server on the port you like
+1. Setup and run a static web server on the port you like. To do that, First create a directory IN YOUR HOME DIRECTORY. This directory will become the "Document Root" of your web server. Internet users will not be able to reach files that are "above" this directory. "/" in the user's browser adress bar will correspond to this directory.
+You must also configure your webserver to use this directory as the document root.
 
 2. Create IMAGES directory and put an image from the web in it using wget
 
@@ -359,7 +360,10 @@ If you want to do more  :
 
 
 Understand Javascript Asynchronous Principles:
+https://scotch.io/courses/10-need-to-know-javascript-concepts/callbacks-promises-and-async
+
 https://www.youtube.com/watch?v=8aGhZQkoFbQ&feature=youtu.be
+
 https://nodejs.org/en/docs/guides/dont-block-the-event-loop/
 
 Use it in node :
