@@ -332,17 +332,27 @@ https://flaviocopes.com/express/
 - When you're done, you can upgrade so that another user can propose a better answer, and allow voting ( one vote /user/ reponse)
 - Show best voted answers on front page.
 
-
-You can use this tutorial, but don't do everything as it does.
-We don't need Models ( but use it if you want to)
-We don't need SEQUELIZE ( but use it if you want to)
 USE ONLY SQLITE 
+
+
+LEARN EXPRESS-SESSION
+https://codeforgeek.com/manage-session-using-node-js-express-4/
+
+
+SIMPLE TUTORIAL FOR REGISTRATION , AUTHENTICATION AND SESSION COOKIE
+https://medium.com/@kilgarenone/easily-implements-user-authentication-in-nodejs-b22bdb6f15bc
+
+
+
+ANOTHER TUTORIAL ( but don't do everything as it does) 
+We don't need Models ( but use it if you want to)
+DON'T USE SEQUELIZE 
 
 https://www.codementor.io/@mayowa.a/how-to-build-a-simple-session-based-authentication-system-with-nodejs-from-scratch-6vn67mcy3
 
 
 
-When you're done :
+If you want to do more  :
 
 - Open a free account on Sendgrid, and use it to send a confirmation email from your app
 - Users can add questions / answers only when email is confirmed.
@@ -350,7 +360,6 @@ When you're done :
 
 Understand Javascript Asynchronous Principles:
 https://www.youtube.com/watch?v=8aGhZQkoFbQ&feature=youtu.be
-
 https://nodejs.org/en/docs/guides/dont-block-the-event-loop/
 
 Use it in node :
